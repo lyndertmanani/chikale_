@@ -48,7 +48,8 @@ namespace Green_house_chikale.Authn
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Settings setting = new Settings();
+            UserControl(setting);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -67,5 +68,10 @@ namespace Green_house_chikale.Authn
             }
         }
 
+        private void Expense_btn_Click(object sender, EventArgs e)
+        {
+           Expenses ex = new Expenses();
+            UserControl(ex);
+        }
     }
 }

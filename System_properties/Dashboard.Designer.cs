@@ -43,9 +43,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.task1 = new Green_house_chikale.System_properties.Task();
             this.soil1 = new Green_house_chikale.System_properties.Soil();
             this.overview1 = new Green_house_chikale.System_properties.Overview();
-            this.task1 = new Green_house_chikale.System_properties.Task();
+            this.Expense_btn = new System.Windows.Forms.Button();
             this.ControlsPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,6 +87,7 @@
             this.ControlsPanel.Controls.Add(this.label2);
             this.ControlsPanel.Controls.Add(this.label1);
             this.ControlsPanel.Controls.Add(this.button6);
+            this.ControlsPanel.Controls.Add(this.Expense_btn);
             this.ControlsPanel.Controls.Add(this.button2);
             this.ControlsPanel.Controls.Add(this.button3);
             this.ControlsPanel.Controls.Add(this.button1);
@@ -98,7 +100,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(12, 373);
+            this.panel2.Location = new System.Drawing.Point(22, 428);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 1);
             this.panel2.TabIndex = 2;
@@ -117,9 +119,9 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.2F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Location = new System.Drawing.Point(14, 348);
+            this.label3.Location = new System.Drawing.Point(24, 403);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Settings";
             // 
@@ -130,7 +132,7 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = global::Green_house_chikale.Properties.Resources.icons8_logout_25px;
-            this.button5.Location = new System.Drawing.Point(-32, 435);
+            this.button5.Location = new System.Drawing.Point(-22, 490);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(265, 43);
             this.button5.TabIndex = 0;
@@ -147,7 +149,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label2.Location = new System.Drawing.Point(22, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Menu";
             // 
@@ -159,7 +161,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(24, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 29);
+            this.label1.Size = new System.Drawing.Size(136, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Green house";
             // 
@@ -170,7 +172,7 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Image = global::Green_house_chikale.Properties.Resources.icons8_settings_25px;
-            this.button6.Location = new System.Drawing.Point(-32, 386);
+            this.button6.Location = new System.Drawing.Point(-22, 441);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(265, 43);
             this.button6.TabIndex = 0;
@@ -248,11 +250,20 @@
             this.panel4.Size = new System.Drawing.Size(965, 674);
             this.panel4.TabIndex = 4;
             // 
+            // task1
+            // 
+            this.task1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.task1.Location = new System.Drawing.Point(-5, 0);
+            this.task1.Margin = new System.Windows.Forms.Padding(4);
+            this.task1.Name = "task1";
+            this.task1.Size = new System.Drawing.Size(3681, 2588);
+            this.task1.TabIndex = 2;
+            // 
             // soil1
             // 
             this.soil1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.soil1.Location = new System.Drawing.Point(0, 0);
-            this.soil1.Margin = new System.Windows.Forms.Padding(6);
+            this.soil1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.soil1.Name = "soil1";
             this.soil1.Size = new System.Drawing.Size(965, 678);
             this.soil1.TabIndex = 1;
@@ -266,18 +277,25 @@
             this.overview1.Size = new System.Drawing.Size(965, 674);
             this.overview1.TabIndex = 0;
             // 
-            // task1
+            // Expense_btn
             // 
-            this.task1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1.Location = new System.Drawing.Point(-5, 0);
-            this.task1.Margin = new System.Windows.Forms.Padding(4);
-            this.task1.Name = "task1";
-            this.task1.Size = new System.Drawing.Size(3681, 2588);
-            this.task1.TabIndex = 2;
+            this.Expense_btn.FlatAppearance.BorderSize = 0;
+            this.Expense_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Expense_btn.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Expense_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Expense_btn.Image = global::Green_house_chikale.Properties.Resources.icons8_ground_25px;
+            this.Expense_btn.Location = new System.Drawing.Point(-32, 338);
+            this.Expense_btn.Name = "Expense_btn";
+            this.Expense_btn.Size = new System.Drawing.Size(287, 43);
+            this.Expense_btn.TabIndex = 0;
+            this.Expense_btn.Text = "Expense";
+            this.Expense_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Expense_btn.UseVisualStyleBackColor = true;
+            this.Expense_btn.Click += new System.EventHandler(this.Expense_btn_Click);
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 716);
             this.Controls.Add(this.panel4);
@@ -317,5 +335,6 @@
         private System_properties.Overview overview1;
         private System_properties.Soil soil1;
         private System_properties.Task task1;
+        private System.Windows.Forms.Button Expense_btn;
     }
 }

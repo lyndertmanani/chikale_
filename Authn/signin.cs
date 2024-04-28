@@ -21,7 +21,7 @@ namespace Green_house_chikale
         private DateTime lockTime;
 
         private void Signin_Load(object sender, EventArgs e)
-        {
+        { 
             string filePath = @"LoginAttempts.txt";
             if (File.Exists(filePath))
             {
@@ -42,7 +42,7 @@ namespace Green_house_chikale
 
                 db.OpenConnection();
                 command.Connection = db.GetConnection;
-                command.CommandText = "SELECT * FROM users WHERE Username = '" + Email.Text + "' and Password = '" + Password.Text + "'";
+                command.CommandText = "SELECT * FROM users WHERE Username = '" + Email.Text + "' and password = '" + Password.Text + "'";
                 MySqlDataReader rd = command.ExecuteReader();
                 int count = 0;
                 while (rd.Read())

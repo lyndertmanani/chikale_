@@ -1,5 +1,8 @@
 ﻿ 
 using System;
+using System.Drawing;
+using System.Drawing.Text;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Green_house_chikale
@@ -66,6 +69,13 @@ namespace Green_house_chikale
         private void Authn_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+       
+        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }

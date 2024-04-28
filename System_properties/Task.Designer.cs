@@ -28,45 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Duties = new System.Windows.Forms.MonthCalendar();
+            this.Members = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Members)).BeginInit();
             this.SuspendLayout();
             // 
-            // monthCalendar1
+            // Duties
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(669, 23);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
+            this.Duties.CalendarDimensions = new System.Drawing.Size(2, 3);
+            this.Duties.Location = new System.Drawing.Point(31, 23);
+            this.Duties.Name = "Duties";
+            this.Duties.TabIndex = 1;
             // 
-            // dataGridView1
+            // Members
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(611, 591);
-            this.dataGridView1.TabIndex = 2;
+            this.Members.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.Members.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 6.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Members.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Members.GridColor = System.Drawing.SystemColors.Control;
+            this.Members.Location = new System.Drawing.Point(501, 23);
+            this.Members.Name = "Members";
+            this.Members.RowHeadersWidth = 51;
+            this.Members.RowTemplate.Height = 24;
+            this.Members.Size = new System.Drawing.Size(344, 437);
+            this.Members.TabIndex = 2;
+            this.Members.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.Members_CellFormatting);
             // 
             // Task
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.Members);
+            this.Controls.Add(this.Duties);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Task";
             this.Size = new System.Drawing.Size(965, 678);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Task_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Members)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MonthCalendar Duties;
+        private System.Windows.Forms.DataGridView Members;
     }
 }

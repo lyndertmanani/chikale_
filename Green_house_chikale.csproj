@@ -40,6 +40,9 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\syspolice\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>D:\ericlyndert\Github\plug and templets\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
@@ -182,6 +185,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Client_modules\Database.cs" />
+    <Compile Include="Client_modules\Weathers.cs" />
     <Compile Include="Startup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,11 +212,23 @@
     <Compile Include="Authn\signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="System_properties\Expenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="System_properties\Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="System_properties\Overview.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="System_properties\Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System_properties\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="System_properties\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="System_properties\Soil.cs">
       <SubType>UserControl</SubType>
@@ -229,6 +245,7 @@
     <EmbeddedResource Include="Authn0.resx">
       <DependentUpon>Authn0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Startup.resx">
       <DependentUpon>Startup.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,8 +268,14 @@
     <EmbeddedResource Include="Authn\signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="System_properties\Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System_properties\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System_properties\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System_properties\Soil.resx">
       <DependentUpon>Soil.cs</DependentUpon>

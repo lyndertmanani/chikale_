@@ -119,7 +119,7 @@
             this.NoAcc_btn.LinkColor = System.Drawing.Color.Gray;
             this.NoAcc_btn.Location = new System.Drawing.Point(282, 579);
             this.NoAcc_btn.Name = "NoAcc_btn";
-            this.NoAcc_btn.Size = new System.Drawing.Size(58, 17);
+            this.NoAcc_btn.Size = new System.Drawing.Size(48, 16);
             this.NoAcc_btn.TabIndex = 2;
             this.NoAcc_btn.TabStop = true;
             this.NoAcc_btn.Text = "Register";
@@ -132,7 +132,7 @@
             this.ReadyAcc_btn.LinkColor = System.Drawing.Color.Gray;
             this.ReadyAcc_btn.Location = new System.Drawing.Point(485, 579);
             this.ReadyAcc_btn.Name = "ReadyAcc_btn";
-            this.ReadyAcc_btn.Size = new System.Drawing.Size(49, 17);
+            this.ReadyAcc_btn.Size = new System.Drawing.Size(41, 16);
             this.ReadyAcc_btn.TabIndex = 3;
             this.ReadyAcc_btn.TabStop = true;
             this.ReadyAcc_btn.Text = "Sign in";
@@ -145,7 +145,7 @@
             this.label1.ForeColor = System.Drawing.Color.Gray;
             this.label1.Location = new System.Drawing.Point(337, 575);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 21);
+            this.label1.Size = new System.Drawing.Size(19, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "|";
             // 
@@ -156,7 +156,7 @@
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(466, 575);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 21);
+            this.label2.Size = new System.Drawing.Size(19, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "|";
             // 
@@ -167,14 +167,15 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Gray;
             this.linkLabel1.Location = new System.Drawing.Point(352, 578);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(123, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(101, 16);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // AuthnFrom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(820, 621);

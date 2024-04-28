@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TimeLog = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.AuthnUser = new System.Windows.Forms.Label();
+            this.recommendationLabel = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.celciusLabel = new System.Windows.Forms.Label();
+            this.Humidity = new System.Windows.Forms.Label();
+            this.Winds = new System.Windows.Forms.Label();
+            this.pressureLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.DateTime = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,17 +53,10 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(95, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 77);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(223, 73);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TimeLog
             // 
@@ -71,131 +64,162 @@
             this.TimeLog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLog.Location = new System.Drawing.Point(814, 19);
             this.TimeLog.Name = "TimeLog";
-            this.TimeLog.Size = new System.Drawing.Size(129, 23);
+            this.TimeLog.Size = new System.Drawing.Size(105, 19);
             this.TimeLog.TabIndex = 0;
             this.TimeLog.Text = "Today\'s Plan";
+            // 
+            // AuthnUser
+            // 
+            this.AuthnUser.AutoSize = true;
+            this.AuthnUser.Font = new System.Drawing.Font("Century Gothic", 7F);
+            this.AuthnUser.Location = new System.Drawing.Point(76, 42);
+            this.AuthnUser.Name = "AuthnUser";
+            this.AuthnUser.Size = new System.Drawing.Size(109, 15);
+            this.AuthnUser.TabIndex = 0;
+            this.AuthnUser.Text = "email@domain.com";
+            // 
+            // recommendationLabel
+            // 
+            this.recommendationLabel.AutoSize = true;
+            this.recommendationLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recommendationLabel.Location = new System.Drawing.Point(88, 153);
+            this.recommendationLabel.Name = "recommendationLabel";
+            this.recommendationLabel.Size = new System.Drawing.Size(97, 19);
+            this.recommendationLabel.TabIndex = 0;
+            this.recommendationLabel.Text = "......................";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.SystemColors.Control;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.Gray;
+            chartArea1.BorderColor = System.Drawing.Color.Gray;
+            chartArea1.Name = "Cost Analysis";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.ForeColor = System.Drawing.Color.Gray;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.DarkGray;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.DarkGray;
+            legend1.Name = "Legend1";
+            legend1.TitleForeColor = System.Drawing.Color.DimGray;
+            legend1.TitleSeparatorColor = System.Drawing.Color.DimGray;
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(26, 240);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "Cost Analysis";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.LabelForeColor = System.Drawing.Color.DarkGray;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(870, 275);
+            this.chart1.TabIndex = 3;
+            this.chart1.Text = "chart1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 7F);
-            this.label2.Location = new System.Drawing.Point(25, 42);
+            this.label2.Location = new System.Drawing.Point(23, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 0;
-            this.label2.Text = "email@domain.com";
+            this.label2.Text = "Welcome";
             // 
-            // flowLayoutPanel2
+            // celciusLabel
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(255, 77);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(233, 73);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.celciusLabel.AutoSize = true;
+            this.celciusLabel.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.celciusLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.celciusLabel.Location = new System.Drawing.Point(92, 94);
+            this.celciusLabel.Name = "celciusLabel";
+            this.celciusLabel.Size = new System.Drawing.Size(67, 19);
+            this.celciusLabel.TabIndex = 4;
+            this.celciusLabel.Text = "celcius ";
             // 
-            // flowLayoutPanel3
+            // Humidity
             // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(494, 77);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(219, 73);
-            this.flowLayoutPanel3.TabIndex = 1;
+            this.Humidity.AutoSize = true;
+            this.Humidity.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Humidity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Humidity.Location = new System.Drawing.Point(297, 94);
+            this.Humidity.Name = "Humidity";
+            this.Humidity.Size = new System.Drawing.Size(81, 19);
+            this.Humidity.TabIndex = 4;
+            this.Humidity.Text = " humidity";
             // 
-            // flowLayoutPanel4
+            // Winds
             // 
-            this.flowLayoutPanel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(719, 77);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(222, 73);
-            this.flowLayoutPanel4.TabIndex = 1;
+            this.Winds.AutoSize = true;
+            this.Winds.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Winds.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Winds.Location = new System.Drawing.Point(516, 94);
+            this.Winds.Name = "Winds";
+            this.Winds.Size = new System.Drawing.Size(99, 19);
+            this.Winds.TabIndex = 4;
+            this.Winds.Text = " windspeed";
             // 
-            // flowLayoutPanel5
+            // pressureLabel
             // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(26, 166);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(915, 80);
-            this.flowLayoutPanel5.TabIndex = 1;
+            this.pressureLabel.AutoSize = true;
+            this.pressureLabel.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.pressureLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pressureLabel.Location = new System.Drawing.Point(753, 94);
+            this.pressureLabel.Name = "pressureLabel";
+            this.pressureLabel.Size = new System.Drawing.Size(72, 19);
+            this.pressureLabel.TabIndex = 4;
+            this.pressureLabel.Text = "pressure";
             // 
-            // kryptonDataGridView1
+            // panel1
             // 
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(15, 322);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.RowHeadersWidth = 51;
-            this.kryptonDataGridView1.RowTemplate.Height = 24;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(396, 275);
-            this.kryptonDataGridView1.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.Location = new System.Drawing.Point(26, 78);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(893, 59);
+            this.panel1.TabIndex = 5;
+            // 
+            // DateTime
+            // 
+            this.DateTime.AutoSize = true;
+            this.DateTime.Font = new System.Drawing.Font("Arial", 13.25F, System.Drawing.FontStyle.Bold);
+            this.DateTime.Location = new System.Drawing.Point(22, 151);
+            this.DateTime.Name = "DateTime";
+            this.DateTime.Size = new System.Drawing.Size(65, 21);
+            this.DateTime.TabIndex = 0;
+            this.DateTime.Text = "Status";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 261);
+            this.label3.Location = new System.Drawing.Point(22, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 23);
+            this.label3.Size = new System.Drawing.Size(175, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Dashboard";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 7F);
-            this.label4.Location = new System.Drawing.Point(815, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Date.Time.Display";
-            // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.Gray;
-            chartArea3.BorderColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "Cost Analysis";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.ForeColor = System.Drawing.Color.Gray;
-            legend3.HeaderSeparatorColor = System.Drawing.Color.DarkGray;
-            legend3.ItemColumnSeparatorColor = System.Drawing.Color.DarkGray;
-            legend3.Name = "Legend1";
-            legend3.TitleForeColor = System.Drawing.Color.DimGray;
-            legend3.TitleSeparatorColor = System.Drawing.Color.DimGray;
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(443, 322);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "Cost Analysis";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.LabelForeColor = System.Drawing.Color.DarkGray;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(485, 275);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            this.label3.Text = "Expenditure overview";
+            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // Overview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pressureLabel);
+            this.Controls.Add(this.Winds);
+            this.Controls.Add(this.Humidity);
+            this.Controls.Add(this.celciusLabel);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.kryptonDataGridView1);
-            this.Controls.Add(this.flowLayoutPanel5);
-            this.Controls.Add(this.flowLayoutPanel4);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.TimeLog);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DateTime);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.AuthnUser);
+            this.Controls.Add(this.recommendationLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Overview";
             this.Size = new System.Drawing.Size(965, 678);
             this.Load += new System.EventHandler(this.Overview_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,16 +229,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label TimeLog;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label AuthnUser;
+        private System.Windows.Forms.Label recommendationLabel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label celciusLabel;
+        private System.Windows.Forms.Label Humidity;
+        private System.Windows.Forms.Label Winds;
+        private System.Windows.Forms.Label pressureLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label DateTime;
+        private System.Windows.Forms.Label label3;
     }
 }

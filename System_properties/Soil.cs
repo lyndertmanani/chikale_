@@ -7,8 +7,8 @@ namespace Green_house_chikale.System_properties
     public partial class Soil : UserControl
     {
         // State variables to track soilType, cropRecommendation, and searchPerformed
-        private string soilType = "Unknown";
-        private string cropRecommendation = "No recommendation for unknown soil types";
+        private string soilType = "Oops!";
+        private string cropRecommendation = "No recommendation for unknown soil types ";
         private bool searchPerformed = false;
 
         // Predefined descriptions for each soil type
@@ -28,61 +28,78 @@ namespace Green_house_chikale.System_properties
             InitializeComponent();
             Soil_title.Visible = false;
             soilData.Visible = false;
+            Errorx.Visible = false;
         }
 
         private void Search_btn_Click(object sender, EventArgs e)
         {
+            
             string userInput = SearchBox.Text.ToLower();
 
-            // Check if search box input is too long
-            if (userInput.Length > 100)
+            if (SearchBox.Text == "")
             {
-                Soil_title.Text = "Text too long for soil description";
-                soilData.Text = "";
-                return;
+                Errorx.Visible =true;
+                Soil_title.Visible = false;
+                soilData.Visible = false;
+                Errorx.Text = "Please provide neccessay data, Search box is empty";
             }
-
-            // Function to calculate similarity between user input and soil descriptions
-            double CalculateSimilarity(string str1, string str2)
+            else
             {
-                var words1 = new HashSet<string>(str1.Split(' '));
-                var words2 = new HashSet<string>(str2.Split(' '));
-
-                var intersection = new HashSet<string>(words1);
-                intersection.IntersectWith(words2);
-
-                var union = new HashSet<string>(words1);
-                union.UnionWith(words2);
-
-                return (double)intersection.Count / union.Count;
-            }
-
-            // Calculate similarity for each soil type and choose the one with the highest similarity
-            double maxSimilarity = 0;
-            string bestMatch = "Unknown";
-
-            foreach (var type in soilDescriptions.Keys)
-            {
-                var description = soilDescriptions[type].ToLower();
-                var similarity = CalculateSimilarity(userInput, description);
-
-                if (similarity > maxSimilarity)
+                Soil_title.Visible = true;
+                soilData.Visible = true;
+                // Check if search box input is too long
+                if (userInput.Length > 100)
                 {
-                    maxSimilarity = similarity;
-                    bestMatch = type;
+                    Errorx.Visible = true;
+                    Soil_title.Visible = false;
+                    soilData.Visible = false;
+                    Errorx.Text = "Text too long for soil description";
+                    soilData.Text = "";
+                    return;
                 }
+
+                // Function to calculate similarity between user input and soil descriptions
+                double CalculateSimilarity(string str1, string str2)
+                {
+                    var words1 = new HashSet<string>(str1.Split(' '));
+                    var words2 = new HashSet<string>(str2.Split(' '));
+
+                    var intersection = new HashSet<string>(words1);
+                    intersection.IntersectWith(words2);
+
+                    var union = new HashSet<string>(words1);
+                    union.UnionWith(words2);
+
+                    return (double)intersection.Count / union.Count;
+                }
+
+                // Calculate similarity for each soil type and choose the one with the highest similarity
+                double maxSimilarity = 0;
+                string bestMatch = "unknown";
+
+                foreach (var type in soilDescriptions.Keys)
+                {
+                    var description = soilDescriptions[type].ToLower();
+                    var similarity = CalculateSimilarity(userInput, description);
+
+                    if (similarity > maxSimilarity)
+                    {
+                        maxSimilarity = similarity;
+                        bestMatch = type;
+                    }
+                }
+
+                // Set the identified soil type and crop recommendation
+                soilType = bestMatch;
+                cropRecommendation = $"{bestMatch}: {GetRecommendationForSoilType(bestMatch)}";
+
+                // Set the searchPerformed state to true
+                searchPerformed = true;
+
+                // Update UI
+                Soil_title.Text = soilType;
+                soilData.Text = cropRecommendation;
             }
-
-            // Set the identified soil type and crop recommendation
-            soilType = bestMatch;
-            cropRecommendation = $"{bestMatch}: {GetRecommendationForSoilType(bestMatch)}";
-
-            // Set the searchPerformed state to true
-            searchPerformed = true;
-
-            // Update UI
-            Soil_title.Text = soilType;
-            soilData.Text = cropRecommendation;
         }
 
         // Function to get crop recommendation based on soil type
@@ -108,6 +125,11 @@ namespace Green_house_chikale.System_properties
                 default:
                     return "No recommendation";
             }
+        }
+
+        private void SearchBox_Enter(object sender, EventArgs e)
+        {
+            Errorx.Visible = false;
         }
     }
 }

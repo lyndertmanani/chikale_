@@ -1,0 +1,32 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"greendb"},
+{"type":"table","name":"expense","database":"greendb","data":
+[
+{"id":"1","Assigned":"test","Description":"Dog food","Activites":"Income","Amount":"50000.00","Payment":"Cash ","Date":"0000-00-00"},
+{"id":"2","Assigned":"test","Description":"test","Activites":"Income","Amount":"40000.00","Payment":"Bank","Date":"2024-04-28"},
+{"id":"3","Assigned":"test","Description":"test","Activites":"Income","Amount":"40000.00","Payment":"Bank","Date":"2024-04-28"},
+{"id":"4","Assigned":"test","Description":"test","Activites":"Output","Amount":"50000.00","Payment":"Bank","Date":"2024-04-28"},
+{"id":"5","Assigned":"test","Description":"test","Activites":"Output","Amount":"500.00","Payment":"Bank","Date":"2024-04-28"},
+{"id":"6","Assigned":"test","Description":"test","Activites":"Output","Amount":"50.00","Payment":"Bank","Date":"2024-04-28"},
+{"id":"7","Assigned":"test","Description":"test","Activites":"Income","Amount":"6000.00","Payment":"Cash ","Date":"2024-04-28"}
+]
+}
+,{"type":"table","name":"plants","database":"greendb","data":
+[
+
+]
+}
+,{"type":"table","name":"settings","database":"greendb","data":
+[
+{"Location":"mzuzu"}
+]
+}
+,{"type":"table","name":"users","database":"greendb","data":
+[
+{"id":"1","firstname":"Jameson","Surname":"Kandulu","username":"Jameson","password":"12345","roles":"Regular","DutyHex":"#0440BC"},
+{"id":"2","firstname":"Grace","Surname":"Nsema","username":"Uzilile","password":"uzzi","roles":"Regular","DutyHex":"#58FD59"},
+{"id":"3","firstname":"test","Surname":"test","username":"test","password":"test","roles":"Regular","DutyHex":"#63101E"}
+]
+}
+]
